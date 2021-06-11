@@ -1,0 +1,126 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0px;
+    padding: 0px;
+    min-height: 100vh;
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+    color: white;
+}
+
+h2 {
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    margin-bottom: 0;
+}
+
+p {
+    font-size: 1.1rem;
+    margin-top: 0.2em;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding-top: 40px;
+    margin: auto;
+}
+
+.photo,
+.content-photo {
+    width: 400px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.photo {
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 4em;
+}
+
+.content-photo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(53, 53, 53, 0.534);
+    padding: 0.3em 1.5em;
+    opacity: 0;
+    transition: all .3s;
+}
+
+.steps-content {
+    left: -400px;
+    opacity: 1;
+    background-color: rgb(34, 69, 134);
+}
+
+.step:hover .steps-content {
+    left: 0;
+    transition: 0.5s;
+}
+
+.dog:hover {
+    background-size: 135%;
+    transition-property: all;
+    transition-delay: .3s;
+}
+
+.dog:hover .content-photo {
+    opacity: 1;
+}
+
+.dog {
+    background: url(img/1.jpg) no-repeat center/cover;
+}
+
+.step {
+    background: url(img/2.jpg) no-repeat center/cover;
+}
+
+.clearfix {
+    content: " ";
+    display: table;
+    clear: both;
+}
+
+.button {
+    margin: 0 auto 4em auto;
+    display: block;
+}
+
+.button,
+.button2 {
+    padding: .8em 1em;
+    border: solid 2px rgb(6, 105, 219);
+    text-decoration: none;
+    text-transform: uppercase;
+    color: rgb(6, 105, 219);
+    border-radius: 0.5em;
+    width: 70%;
+    font-weight: 700;
+    font-size: 1.2rem;
+}
+
+.button2 {
+    background-color: rgb(6, 105, 219);
+    border-color: rgb(2, 120, 255);
+    color: white;
+}
+
+.button:hover {
+    background-color: rgb(6, 105, 219);
+    color: white;
+    transition: all 0.3s;
+}
